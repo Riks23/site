@@ -1,275 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/style/main.min.css">
-    <link rel="stylesheet" href="./src/style/vendor.min.css">
+    <title>Sights of Volgograd</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style/hystmodal.min.css">
+    <link rel="stylesheet" href="./src/style/main.min.css">
+    <link rel="stylesheet" href="./src/style/vendor.min.css">
+    <script defer src="./src/js/hystmodal.min.js"></script>
     <script defer src="./src/js/JQuery.js"></script>
-    <script defer src="./src/js/itc-slider.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="./src/js/app.js"></script>
-    <script defer src="./src/js/itc-slider.js"></script>
 </head>
 
 <body>
     <div class="header">
-        <div class="header-top">
-            <div class="header-top__container container">
-                <div class="header-top__content">
-                    <div class="header-top__logo">
-                        <img src="./src/assets/img/logoSlider.png" alt="header-logo" class="header-logo">
-                    </div>
-                    <div class="header-top__title">
-                        КЛИНИЧЕСКАЯ БОЛЬНИЦА СКОРОЙ МЕДИЦИНСКОЙ ПОМОЩИ №15
-                    </div>
-                    <div class="header-top__button"><a href="#" class="button">Запись на прием</a></div>
+        <div class="header__container container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <img class="logo" src="./src/assets/img/logo2.png" alt="logo">
+                    <h1 class="logo__text">Sights of Volgograd</h1>
                 </div>
-            </div>
-        </div>
+                <div class="header__title">
+                    <p>Достопримечательности Волгоградской области</p>
+                </div>
+                <nav>
+                    <ul class="header__nav" id="navigation">
+                        <li><a href="./museums.html">Музеи</a></li>
+                        <li><a href="./monument.html">Памятники</a></li>
+                        <li>
+                            <a class="nature" href="#">Природа</a>
+                            <ol class="submenu">
+                                <li><a href="./water.html">Реки и Озера</a></li>
+                                <li><a href="./lands.html">Горы и пещеры</a></li>
+                                <li><a href="./forest.html">Леса</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <button class="header__button btn" id="open"><i class='bx bx-search'></i></button>
+                            <div id="form">
+                                <form action="#" method="post">
+                                    <input class="search-input" type="text" value="" placeholder="найти" />
+                                </form>
+                            </div>
+                        </li>
 
-        <div class="header-bottom">
-            <div class="header-bottom__container container">
-                <div class="header-bottom__content">
-                    <ul class="header-bottom__list " id="nav">
-                        <li class="header-bottom__item">
-                            <a href="#" class="header-bottom__link">Пациентам</a>
-                            <ul class="submenu">
-                                <li><a href="">Запись на прием</a></li>
-                                <li><a href="">Расписание</a></li>
-                                <li><a href="">Виды оказания медицинских услуг</a></li>
-                            </ul>
-                        </li>
-                        <li class="header-bottom__item">
-                            <a href="#" class="header-bottom__link">Плантые услуги</a>
-                            <ul class="submenu">
-                                <li><a href="">Виды платных услуг</a></li>
-                                <li><a href="">Приказы, образцы и прейскуранты</a></li>
-                            </ul>
-                        </li>
-                        <li class="header-bottom__item">
-                            <a href="#" class="header-bottom__link">О больнице</a>
-                            <ul class="submenu">
-                                <li><a href="">Наши специалисты</a></li>
-                                <li><a href="">Отделения больницы</a></li>
-                                <li><a href="">Кафедра ВолГМУ</a></li>
-                            </ul>
-                        </li>
-                        <li class="header-bottom__item">
-                            <a href="#" class="header-bottom__link">Контакты</a>
-                            <ul class="submenu">
-                                <li><a href="">Телефонный справочник</a></li>
-                                <li><a href="">Карта территори</a></li>
-                                <li><a href="">Вопрос-ответ</a></li>
-                            </ul>
-                        </li>
-                        <li class="header-bottom__search">
-                            <input type="search" class="search" placeholder="Поиск">
-                            <a class="search-btn" href="#"><i class='bx bx-search'></i></a>
-                        </li>
                     </ul>
-                    
-                </div>
+                </nav>
+                <a href="#" id="pull"><i class='bx bx-menu'></i></a>
             </div>
         </div>
     </div>
     <div class="body">
         <div class="body__container container">
             <div class="body__content">
-                <div class="body__img">
-                    <img class="image" src="./src/assets/img/7838a3f1eaeb8095b82b3b794c2a7389.jpg" alt="img">
+                <div class="body__places places">
+                    <div class="places__title title">
+                        <p>Топ мест </p>
+                    </div>
+                    <div class="places__items">
+                        <div class="places__card1 card">
+                            <a href="#">
+                                <img class="card__image" src="./src/assets/img/elton.png" alt="">
+                                <div class="card__text">
+                                    <p class="card__link">Реки и Озера</p>
+                                    <p1>Эльтон</p1>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="places__card2 card">
+                            <a href="">
+                                <img class="card__image" src="./src/assets/img/tulip.png" alt="">
+                                <div class="card__text">
+                                    <p class="card__link">Природа</p>
+                                    <p1>Тюльпанный</p1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="places__card3 card">
+                            <a href="#">
+                                <img class="card__image" src="./src/assets/img/Rodina.png" alt="">
+                                <div class="card__text">
+                                    <p class="card__link">Памятники</p>
+                                    <p1>Родина-мать</p1>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="body-news">
-                    <div class="body-news__title title">Новости</div>
-                    <div class="body-news__items">
-                        <div class="body-news__item">
-                           <img  class="img" src="./src/assets/img/Rectangle 13.png" alt="">
-                            <div class="text-item">
-                                4 февраля Всемирный день борьбы с раковыми заболеваниями.
+                <div class="about">
+                    <div class="about__title">
+                        <p> - ДОСТОПРИМЕЧАТЕЛЬНОСТИ ВОЛГОГРАДСКОЙ ОБЛАСТИ</p>
+                        <h1>О Волгограде</h1>
+                    </div>
+                    <div class="about__text">
+                        <p>Расположен на берегу реки Волга, находится, на юго-западе России. Город-герой с богатой
+                            военной биографией. Поэтому тут очень много памятников военной тематики. Один из них получил
+                            известность во всем мире.
+                        </p>
+                        <p>Мамаев курган и скульптура «Родина-мать зовет!» - являются одной из памятных
+                            достопримечательностей РФ. Располагается в центре города, высота мемориала 87м. Он находится
+                            в 200 м. от 102,0 высоты, где проводились военные действия
+                            с 1942 -1943 г.
+                        </p>
+                        <p>Музей-панорама «Сталинградская битва» - состоит из 8 залов, тут также есть кинозал,
+                            библиотеки, 4 диорамы, и т.д. На открытой площадке располагается часть экспонатов.
+                        </p>
+                        <p>Мельница Гергардта – ее здание было разрушено вовремя битвы при Сталинграде. Сегодня
+                            развалины являются частью Музея «Сталинградская битва».
+                        </p>
+                        <p>Центральная набережная – это двухуровневая набережная, один уровень которой прилегает к реке,
+                            а второй – к жилым домам. Тут проводятся различные мероприятия и торжества. Любимое место
+                            туристов и горожан.
+                        </p>
+                        <p>Площадь Павших борцов – до 1917 г. тут стояли торговые лавки и трактиры. Сегодня тут горит
+                            Вечный огонь в память о павших во время ВОВ героях. Также находятся 2 братские могилы,
+                            вокруг – жилые дома.</p>
+                    </div>
+                </div>
+                <div class="vlg">
+                    <div class="vlg__title title">
+                        <p> — Наш Волгорад</p>
+                    </div>
+                    <div class="vlg__images">
+
+                        <a href="#" data-hystmodal="#modalOne" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/1.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalTwo" class="btn button-modal">
+                            <img class="btn-image btn button-modal"
+                                src="./src/assets/img/2.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalThree" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/3.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalFour" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/4.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalFive" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/5.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalSix" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/6.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalSeven" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/7.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalEight " class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/8.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalNine" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/9.png" alt="logo">
+                        </a>
+                        <a href="#" data-hystmodal="#modalTen" class="btn button-modal">
+                            <img  class="btn-image btn button-modal"
+                                src="./src/assets/img/10.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalOne">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/1.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
                             </div>
-                            <a href="#" class="btn"> Подробнее</a>
                         </div>
-                        <div class="body-news__item">
-                          <img  class="img" src="./src/assets/img/Rectangle 14.png" alt="">
-                            <div class="text-item">
-                                1 февраля 2023 года при поддержке Комитета здравоохранения...
-                                
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalTwo">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/2.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
                             </div>
-                            <a href="#" class="btn"> Подробнее</a>
                         </div>
-                        <div class="body-news__item">
-                           <img  class="img" src="./src/assets/img/Rectangle 15.png" alt="">
-                            <div class="text-item">
-                                Эстафета памяти посвященная 80 летию Сталинградской битвы
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalThree">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/3.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
                             </div>
-                            <a href="#" class="btn"> Подробнее</a>
                         </div>
-                        <div class="body-news__item">
-                           <img class="img" src="./src/assets/img/Rectangle 16.png">
-                            <div class="text-item">Экзоскелет - инновационные импланты 2023 года </div>
-                            <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalFour">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/4.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalFive">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/5.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalSix">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/6.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalSeven">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/7.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalEight ">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/8.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalNine">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/9.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hystmodal modal" id="modalTen">
+                    <div class="modal__viewport hystmodal__wrap">
+                        <div class="modal__card hystmodal__window">
+                            <button data-hystclose type="button" class="modal__close">&times;</button>
+                            <div class="modal__body">
+                                <img src="./src/assets/img/10.png" alt="" class="modal__img">
+                                <div class="modal__content">
+                                    <h2>Красотища</h2>
+                                    <p>Автор Интернет</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="reviews">
-        <div class="reviews__container container">
-            <div class="reviews__content">
-                <div class="reviews__title title">
-                    Отзывы наших пациентов
-                    <div class="reviews__button"><a href="#" class="reviews__input">Оставить отзыв</a></div>
-                </div>
-                <div class="reviews__row">
-                    <div class="slider">
-                        <div class="itc-slider" data-slider="itc-slider" data-loop="true" data-autoplay="false">
-                          <div class="itc-slider__wrapper">
-                            <div class="itc-slider__items">
-                              <div class="itc-slider__item">
-                                <div class="icon-reviews">
-                                    <img src="./src/assets/img/Ellipse 4.png" alt="">
-                                    <div class="reviews-title">Иван</div> 
-                                </div>
-                                <div class="reviews-text">Огромная благодарность Заведующему
-                                     отделения гинекологии Прохватилову Сергею Алексеевичу и его коллективу!
-                                     Большое спасибо
-                                    </div> 
-          
-                              </div>
-                              <div class="itc-slider__item">
-                                <div class="icon-reviews">
-                                    <img src="./src/assets/img/Ellipse 4.png" alt="">
-                                    <div class="reviews-title">Иван</div> 
-                                </div>
-                                <div class="reviews-text">Огромная благодарность Заведующему
-                                     отделения гинекологии Прохватилову Сергею Алексеевичу и его коллективу!
-                                     Большое спасибо
-                                    </div> 
-                              </div>
-                              <div class="itc-slider__item">
-                                <div class="icon-reviews">
-                                    <img src="./src/assets/img/Ellipse 4.png" alt="">
-                                    <div class="reviews-title">Иван</div> 
-                                </div>
-                                <div class="reviews-text">Огромная благодарность Заведующему
-                                     отделения гинекологии Прохватилову Сергею Алексеевичу и его коллективу!
-                                     Большое спасибо
-                                    </div>  
-                              </div>
-                              <div class="itc-slider__item">
-                                <div class="icon-reviews">
-                                    <img src="./src/assets/img/Ellipse 4.png" alt="">
-                                    <div class="reviews-title">Иван</div> 
-                                </div>
-                                <div class="reviews-text">Огромная благодарность Заведующему
-                                     отделения гинекологии Прохватилову Сергею Алексеевичу и его коллективу!
-                                     Большое спасибо
-                                    </div> 
-                              </div>
-          
-          
-                            </div>
-                          </div>
-                          <button class="itc-slider__btn itc-slider__btn_prev">
-                            <i class='bx bx-left-arrow-alt'></i>
-                             </button>
-                          <button class="itc-slider__btn itc-slider__btn_next">
-                            <i class='bx bx-right-arrow-alt' ></i>
-                              </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__title title">Наши преимущества</div>
-        <div class="card__container">
-            <div class="card__content">
-            <div class="card__item">
-                <div class="card__block">
-                    <img class="card-image" src="./src/assets/img/people-transformed.png" alt="">
-                    <div class="title-item"> Квалифицированные врачи</div>
-                    <div class="card-text">В нашей больнице только высококвалицированные врачи 
-                        проходящие переквалификацию каждый год и получаютновые знания</div>
-                </div>
-            </div>
-            <div class="card__item">
-                <div class="card__block">
-                    <img class="card-image1" src="./src/assets/img/Blue_ambulance_icon.png" alt="">
-                    <div class="title-item"> Автомобили</div>
-                    <div class="card-text">Появление в больнице медицинских машин нового поколения, 
-                        оборудованные всем необходимым для спасения жизни пациентов.</div>
-                </div>
-
-            </div>
-            <div class="card__item">
-                <div class="card__block">
-                    <img class="card-image" src="./src/assets/img/i.png" alt="">
-                    <div class="title-item"> Оборудование</div>
-                    <div class="card-text">Новейшее Оборудование для наружного осмотра пациентов, чтобы сделать ваш осмотр приятным. </div>
-                </div>
-
-            </div>
-            <div class="card__item">
-                <div class="card__block">
-                    <img class="card-image" src="./src/assets/img/kisspng-computer-icons-24-hour-clock-clip-art-5adcf7090830e5_8310701615244306010336-transformed.png" alt="">
-                    <div class="title-item"> Работаем 24 часа</div>
-                    <div class="card-text">Как и все больницы мы работаем 24 часа в сутки без перерывов, ведь жизни пациентов превыше всего</div>
-                </div>
-
-            </div>
-        </div> 
-    </div>
-    <div class="problem">
-        <div class="problem__card">
-            <div class="problem__text">Недовольны работой больницы ?</div>
-            <a href="#" class="problem__button">Напишите нам</a>
-        </div>
-        <div class="problem__gos">
-            <a href="#"><img class="problem-image" src="./src/assets/img/Rectangle 32.png" alt=""></a>
         </div>
     </div>
     <div class="footer">
         <div class="footer__container container">
             <div class="footer__content">
                 <div class="footer__logo">
-                    <img src="./src/assets/img/Ellipse 6.png" alt="header-logo" class="footer-logo">
+                    <img class="logo" src="./src/assets/img/logo.png" alt="">
                 </div>
-                <div class="footer__text">
-                    <div class="footer__title">Государственное бюджетное учреждение здравоохранения</div>
-                    <div class="footer__subtitle"> ГУЗ "Клиническая больница скороймедецинской помощи №15"</div>
-                </div>
-                <div class="footer__button">
-                    <a href="#">Карта больницы</a>
-                    <a href="#">Обратная связь</a>
-                </div>
-                <div class="footer__contact">
-                     <div>Контакты</div>    
-                     <div>Call-center(8442)43-81-91</div>  
-                     <div>Горячая линия8(960)869-55 35</div>  
-                     <div>пн - пт: 20:00 - 8:00сб, 
-                    вс: круглосуточно</div> 
-                </div>
-                <div class="footer__item">
-                    <div class="footer__item-title">
-                        Можете посмотреть на нашу больну в социальных сетях
-                    </div>
-                    <div class="footer__networks">
-                        <a href="#" class="social"><i class='bx bxl-telegram'></i></a>
-                        <a href="#" class="social"><i class='bx bxl-vk'></i></a>
-                        <a href="#" class="social"><i class='bx bxl-google' ></i></a>
-                        <a href="#" class="social"><i class='bx bxl-whatsapp' ></i></a>
+                <div class="footer__center">
+                    <div class="footer__title">
+                        <p>Достопримечательности Волгограда</p>
+                        <p>© Sights of Volgograd.ru 2023-2023.Все права защищены.</p>
                     </div>
                 </div>
+                <div class="footer__with">
+                    <p>Связаться с нами</p>
+                    <p>+79053959830</p>
+                    <a href=""><i class='bx bxl-telegram'></i></a>
+                    <a href=""><i class='bx bxl-whatsapp'></i></a>
+                </div>
+
             </div>
         </div>
     </div>
