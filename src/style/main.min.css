@@ -1116,13 +1116,17 @@ ol {
   }
 }
 @media screen and (max-width: 360px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .footer__title > p {
     font-size: 12px;
     width: 250px;
-    text-align: start;
   }
   .footer__with {
     font-size: 12px;
+    padding-bottom: 2%;
   }
   .footer__logo {
     align-items: center;
