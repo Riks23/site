@@ -709,7 +709,7 @@ ol {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 412px) {
   .container {
     padding-left: 5%;
     padding-right: 5%;
@@ -1058,7 +1058,7 @@ ol {
     font-size: 14px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 412px) {
   .vlg__images {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1231,7 +1231,7 @@ ol {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 412px) {
   .footer__content {
     display: flex;
     flex-direction: column-reverse;
